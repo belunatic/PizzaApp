@@ -7,7 +7,7 @@ import { AppProvider } from "./context/AppContext.tsx";
 createRoot(document.getElementById("root")!).render(
 	<StrictMode>
 		<AppProvider>
-			<App title="Typescript Demo" />
+			<App />
 		</AppProvider>
 	</StrictMode>
 );

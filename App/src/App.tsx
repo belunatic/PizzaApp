@@ -1,12 +1,6 @@
 import { FC } from "react";
 import { AppDataContext } from "./context/AppContext";
-
-// Define types
-interface MenuItem {
-	id: number;
-	name: string;
-	price: number;
-}
+import { MenuItem } from "../App.types";
 
 const App: FC = () => {
 	const { menu } = AppDataContext();

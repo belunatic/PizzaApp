@@ -1,20 +1,16 @@
 import { useState, FC, createContext, useContext, ReactNode } from "react";
-
-// Define types
-interface MenuItem {
-	id: number;
-	name: string;
-	price: number;
-}
-
-interface AppContextType {
-	menu: MenuItem[];
-	nextPizzaId: number;
-}
+import { AppContextType } from "../App.types";
 
 const AppContext = createContext<AppContextType | null>(null);
 
-export const AppDataContext = () => useContext(AppContext);
+export const AppDataContext = () => {
+	const context = useContext(AppContext);
+	if (!context) {
+		throw new Error("Context must be used within an AppProvider");
+	}
+
+	return context;
+};
 
 let initialId = 1;
 
