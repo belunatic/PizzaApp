@@ -31,10 +31,12 @@ interface AppProviderProps {
 export const AppProvider: FC<AppProviderProps> = ({ children }) => {
 	const [menu, setMenu] = useState(initialMenu);
 	const [nextPizzaId, setNextpizzaId] = useState(initialId);
+	const [currentOrder, setCurrentOrder] = useState(initialOrder);
 	const [orderQueue, setOrderQueue] = useState(initialOrder);
 
 	return (
-		<AppContext.Provider value={{ menu, nextPizzaId, orderQueue }}>
+		<AppContext.Provider
+			value={{ menu, nextPizzaId, currentOrder, setCurrentOrder }}>
 			{children}
 		</AppContext.Provider>
 	);
