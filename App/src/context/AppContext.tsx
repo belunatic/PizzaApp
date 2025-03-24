@@ -1,5 +1,5 @@
 import { useState, FC, createContext, useContext, ReactNode } from "react";
-import { AppContextType, Order } from "../App.types";
+import { AppContextType, MenuItem, Order } from "../App.types";
 
 const AppContext = createContext<AppContextType | null>(null);
 
@@ -31,7 +31,7 @@ interface AppProviderProps {
 export const AppProvider: FC<AppProviderProps> = ({ children }) => {
 	const [menu, setMenu] = useState(initialMenu);
 	const [nextPizzaId, setNextpizzaId] = useState(initialId);
-	const [currentOrder, setCurrentOrder] = useState(initialOrder);
+	const [currentOrder, setCurrentOrder] = useState<MenuItem[]>([]);
 	const [orderQueue, setOrderQueue] = useState(initialOrder);
 
 	return (

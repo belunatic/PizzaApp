@@ -2,8 +2,9 @@
 export interface AppContextType {
 	menu: MenuItem[];
 	nextPizzaId: number;
-	currentOrder: Order[];
+	currentOrder: MenuItem[];
 	OrderQueue: Order[];
+	setCurrentOrder: (order: MenuItem[]) => void;
 }
 export interface MenuItem {
 	id: number;
