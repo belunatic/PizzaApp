@@ -18,4 +18,5 @@ export type Order = {
 	id: number;
 	pizzas: MenuItem[];
 	status: "ordered" | "complete";
+	total: number;
 };
