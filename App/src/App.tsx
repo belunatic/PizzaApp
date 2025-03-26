@@ -2,6 +2,7 @@ import { FC } from "react";
 import Menu from "./components/Menu";
 import PlaceOrder from "./components/PlaceOrder";
 import OrderQueue from "./components/OrderQueue";
+import CompletedOrder from "./components/CompletedOrder";
 
 const App: FC = () => {
 	return (
@@ -10,6 +11,7 @@ const App: FC = () => {
 			<Menu />
 			<PlaceOrder />
 			<OrderQueue />
+			<CompletedOrder />
 		</div>
 	);
 };
