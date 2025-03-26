@@ -4,11 +4,12 @@ import React from "react";
 export interface AppContextType {
 	menu: MenuItem[];
 	nextPizzaId: number;
+	orderQueue: Order[];
+	setOrderQueue: React.Dispatch<React.SetStateAction<Order[]>>;
 	currentOrder: MenuItem[];
-	OrderQueue: Order[];
 	setCurrentOrder: React.Dispatch<React.SetStateAction<MenuItem[]>>;
 	nextOrderId: number;
-	setOrderQueue: React.Dispatch<React.SetStateAction<Order[]>>;
+	setNextOderId: React.Dispatch<React.SetStateAction<number>>;
 }
 export interface MenuItem {
 	id: number;

@@ -13,7 +13,6 @@ export const AppDataContext = () => {
 };
 
 let initialId = 1;
-let orderInitialId = 1;
 
 const initialMenu = [
 	{ id: initialId++, name: "Margherita", price: 8 },
@@ -22,7 +21,7 @@ const initialMenu = [
 	{ id: initialId++, name: "Veggie", price: 9 },
 ];
 
-const initialOrder: Order[] = [];
+const initialOrderQueue: Order[] = [];
 
 //define type for AppProviderProps
 interface AppProviderProps {
@@ -33,12 +32,21 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
 	const [menu, setMenu] = useState(initialMenu);
 	const [nextPizzaId, setNextpizzaId] = useState(initialId);
 	const [currentOrder, setCurrentOrder] = useState<MenuItem[]>([]);
-	const [orderQueue, setOrderQueue] = useState(initialOrder);
-	const [nextOrderId, setNextOderId] = useState(orderInitialId);
+	const [orderQueue, setOrderQueue] = useState<Order[]>(initialOrderQueue);
+	const [nextOrderId, setNextOderId] = useState(1);
 
 	return (
 		<AppContext.Provider
-			value={{ menu, nextPizzaId, currentOrder, setCurrentOrder }}>
+			value={{
+				menu,
+				nextPizzaId,
+				currentOrder,
+				setCurrentOrder,
+				orderQueue,
+				setOrderQueue,
+				nextOrderId,
+				setNextOderId,
+			}}>
 			{children}
 		</AppContext.Provider>
 	);

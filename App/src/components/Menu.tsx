@@ -6,7 +6,6 @@ const Menu: FC = () => {
 	const { menu, setCurrentOrder } = AppDataContext();
 
 	const placeOrder = (item: MenuItem): void => {
-		console.log("Placing order", item);
 		setCurrentOrder((prev) => [item, ...prev]);
 	};
 
