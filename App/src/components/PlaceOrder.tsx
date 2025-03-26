@@ -1,7 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { MenuItem } from "../App.types";
 import { AppDataContext } from "../context/AppContext";
-import OrderQueue from "./OrderQueue";
 
 const PlaceOrder: FC = () => {
 	const {
@@ -10,7 +9,6 @@ const PlaceOrder: FC = () => {
 		nextOrderId,
 		setNextOderId,
 		setOrderQueue,
-		orderQueue,
 	} = AppDataContext();
 	//keep track of the total price of the order
 	const [total, setTotal] = useState<number>(0);
