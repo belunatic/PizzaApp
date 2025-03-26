@@ -7,6 +7,8 @@ export interface AppContextType {
 	currentOrder: MenuItem[];
 	OrderQueue: Order[];
 	setCurrentOrder: React.Dispatch<React.SetStateAction<MenuItem[]>>;
+	nextOrderId: number;
+	setOrderQueue: React.Dispatch<React.SetStateAction<Order[]>>;
 }
 export interface MenuItem {
 	id: number;
