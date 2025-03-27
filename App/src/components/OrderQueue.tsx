@@ -14,26 +14,32 @@ const OrderQueue: FC = () => {
   };
 
   //display orders that are not complete
-  const displayOrderQueue = orderQueue.map((order) => {
+  const displayOrderQueue = orderQueue.map((order, index) => {
     return order.status === "ordered" ? (
-      <tr key={order.id}>
+      <tr
+        key={order.id}
+        className={index % 2 === 0 ? "bg-gray-100" : "bg-white"}
+      >
         <td className="px-4 py-3 text-left text-sm">{order.id}</td>
-        <td className="w-1/3 px-4 py-3 text-left text-sm text-wrap">
+        <td className="w-1/3 px-4 py-3 text-left text-sm">
           {order.pizzas.map((pizza: MenuItem, index: number) => {
             return order.pizzas.length === 1 ||
               order.pizzas.length - 1 === index ? (
-              <span>{pizza.name} </span>
+              <span className="block">{pizza.name}</span>
             ) : (
-              <span>{pizza.name},</span>
+              <span className="block">{pizza.name},</span>
             );
           })}
         </td>
-        <td className="px-4 py-3 text-left text-sm">{order.total}</td>
+        <td className="px-4 py-3 text-left text-sm font-semibold">
+          ${order.total}
+        </td>
         <td className="px-4 py-3 text-left text-sm">
           <input
             type="checkbox"
             checked={false}
             onChange={() => completeOrder(order.id)}
+            className="mr-2"
           />
           completed
         </td>
@@ -46,7 +52,7 @@ const OrderQueue: FC = () => {
   return (
     <div className="w-1/2">
       {displayOrderQueue ? (
-        <table className="table-auto">
+        <table className="w-full">
           <thead>
             <tr>
               <th className="px-4 py-3 text-left text-sm font-semibold uppercase">
