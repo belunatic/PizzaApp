@@ -23,7 +23,7 @@ const Menu: FC = () => {
   });
 
   return (
-    <div className="w-1/2">
+    <div className="mb-4 w-1/2">
       <div className="grid grid-cols-4">{pizzaMenu}</div>
     </div>
   );

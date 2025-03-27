@@ -8,16 +8,18 @@ import "./App.css";
 
 const App: FC = () => {
   return (
-    <div className="p-2  bg-orange-900">
-      <div className=" h-screen w-full flex flex-col gap-8 p-4 bg-white">
+    <div className="bg-orange-900 p-2">
+      <div className="flex h-screen w-full flex-col gap-8 bg-white p-4">
         <h1 className="text-center text-4xl font-bold uppercase">
           Jazz In-Store Pizza
         </h1>
         <CashInRegister />
-        <Menu />
-        <PlaceOrder />
-        <OrderQueue />
-        <CompletedOrder />
+        <div className="flex flex-wrap">
+          <Menu />
+          <PlaceOrder />
+          <OrderQueue />
+          <CompletedOrder />
+        </div>
       </div>
     </div>
   );

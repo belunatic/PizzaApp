@@ -4,9 +4,9 @@ import { AppDataContext } from "../context/AppContext";
 const CashInRegister: FC = () => {
   const { cashInRegister } = AppDataContext();
   return (
-    <div className=" text-center md:text-right">
+    <div className="text-center text-xl md:text-right">
       <p>
-        Cash in Register: <span>{cashInRegister}</span>
+        Cash: <span className="font-bold">{cashInRegister}</span>
       </p>
     </div>
   );
