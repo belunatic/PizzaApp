@@ -34,6 +34,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
 	const [currentOrder, setCurrentOrder] = useState<MenuItem[]>([]);
 	const [orderQueue, setOrderQueue] = useState<Order[]>(initialOrderQueue);
 	const [nextOrderId, setNextOderId] = useState(1);
+	const [cashInRegister, setCashInTheRegister] = useState(100);
 
 	return (
 		<AppContext.Provider
@@ -46,6 +47,8 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
 				setOrderQueue,
 				nextOrderId,
 				setNextOderId,
+				cashInRegister,
+				setCashInTheRegister,
 			}}>
 			{children}
 		</AppContext.Provider>

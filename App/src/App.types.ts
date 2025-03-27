@@ -10,6 +10,8 @@ export interface AppContextType {
 	setCurrentOrder: React.Dispatch<React.SetStateAction<MenuItem[]>>;
 	nextOrderId: number;
 	setNextOderId: React.Dispatch<React.SetStateAction<number>>;
+	cashInRegister: number;
+	setCashInTheRegister: React.Dispatch<React.SetStateAction<number>>;
 }
 export interface MenuItem {
 	id: number;

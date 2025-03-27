@@ -9,6 +9,7 @@ const PlaceOrder: FC = () => {
 		nextOrderId,
 		setNextOderId,
 		setOrderQueue,
+		setCashInTheRegister,
 	} = AppDataContext();
 	//keep track of the total price of the order
 	const [total, setTotal] = useState<number>(0);
@@ -45,6 +46,9 @@ const PlaceOrder: FC = () => {
 				total: total,
 			},
 		]);
+
+		//add money into register
+		setCashInTheRegister((prev) => prev + total);
 
 		//adjust the order Id
 		setNextOderId((prev) => prev + 1);
