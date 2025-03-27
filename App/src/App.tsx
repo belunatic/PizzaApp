@@ -9,7 +9,7 @@ import "./App.css";
 const App: FC = () => {
   return (
     <div className="bg-orange-900 p-2">
-      <div className="flex h-screen w-full flex-col gap-8 bg-white p-4">
+      <div className="flex h-screen w-full flex-col gap-y-8 bg-white p-4">
         <h1 className="text-center text-4xl font-bold uppercase">
           Jazz In-Store Pizza
         </h1>

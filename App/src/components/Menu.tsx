@@ -24,6 +24,7 @@ const Menu: FC = () => {
 
   return (
     <div className="mb-4 w-1/2">
+      <h2 className="mb-2 border-b-2 text-center text-2xl uppercase">Menu</h2>
       <div className="grid grid-cols-4">{pizzaMenu}</div>
     </div>
   );

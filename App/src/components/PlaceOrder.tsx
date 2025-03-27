@@ -69,7 +69,9 @@ const PlaceOrder: FC = () => {
   }, [currentOrder]);
 
   return (
-    <div className="mb-4 w-1/2">
+    <div className="mb-4 w-1/2 px-1">
+      <h2 className="border-b-2 text-center text-2xl uppercase">Order</h2>
+
       <div>{order}</div>
       {total > 0 && (
         <div>

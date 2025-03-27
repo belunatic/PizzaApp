@@ -34,8 +34,11 @@ const CompletedOrder: FC = () => {
   });
 
   return (
-    <div className="w-1/2">
-      {displayOrderQueue ? (
+    <div className="w-1/2 px-1">
+      <h2 className="border-b-2 text-center text-2xl uppercase">
+        Completed Order
+      </h2>
+      {orderQueue.length > 0 ? (
         <table className="w-full">
           <thead>
             <tr>
