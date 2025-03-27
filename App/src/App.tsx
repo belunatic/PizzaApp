@@ -7,7 +7,7 @@ import CashInRegister from "./components/CashInRegister";
 
 const App: FC = () => {
 	return (
-		<div>
+		<div className="h-screen w-full p-4 flex flex-col">
 			<h1>Jazz Pizza Joint</h1>
 			<CashInRegister />
 			<Menu />
