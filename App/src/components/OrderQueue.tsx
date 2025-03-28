@@ -50,7 +50,7 @@ const OrderQueue: FC = () => {
   });
 
   return (
-    <div className="w-1/2">
+    <div className="mb-4 w-1/2 px-1">
       <h2 className="border-b-2 text-center text-2xl uppercase">Order Queue</h2>
       {orderQueue.length > 0 ? (
         <table className="w-full">
