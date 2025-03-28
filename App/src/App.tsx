@@ -8,8 +8,8 @@ import "./App.css";
 
 const App: FC = () => {
   return (
-    <div className="bg-orange-900 p-2">
-      <div className="flex h-screen w-full flex-col gap-y-8 bg-white p-4">
+    <div className="flex min-h-screen flex-col bg-orange-900 p-2">
+      <div className="flex w-full grow flex-col gap-y-8 bg-white p-4">
         <h1 className="text-center text-4xl font-bold uppercase">
           Jazz In-Store Pizza
         </h1>
@@ -21,6 +21,17 @@ const App: FC = () => {
           <CompletedOrder />
         </div>
       </div>
+      <footer className="text-center">
+        <p>
+          Developed by{" "}
+          <a
+            className="font-medium text-blue-500 underline"
+            href="https://github.com/belunatic"
+          >
+            Abel Sila
+          </a>
+        </p>
+      </footer>
     </div>
   );
 };
